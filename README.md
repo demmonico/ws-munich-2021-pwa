@@ -20,3 +20,24 @@ After cloning this repository, run the following commands in its root directory:
 npm i
 npm start
 ```
+
+---
+
+Starting container
+```sh
+docker-compose up
+```
+
+Install/use workbox (wrapper for service workers)
+```sh
+# install
+docker-compose exec app npm install workbox-cli --global
+ 
+# generate (re-generate)
+docker-compose exec app npm run workbox generateSW
+```
+
+Expose application using [ngrok](https://ngrok.com/download)
+```sh
+./ngrok http 3000
+```
