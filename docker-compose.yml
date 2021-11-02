@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  app:
+    build: .
+    image: pwa/app
+    volumes:
+      - .:/app:delegated
+    ports:
+      - "3000:3000"
+    # initially needed to get node_modules at the local dev
+#    command: [ "npm", "i" ]
